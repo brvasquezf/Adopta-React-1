@@ -1,15 +1,17 @@
 import Card from 'react-bootstrap/Card'
-import Boton from './Boton'
+import Tags from './Tags'
 
-const MyCard = ({image, tittle, description, colorButton, textButton}) => {
+
+
+const MyCard = ({image, tittle, description, text, colorBadge}) => {
   return (
     <>
-        <Card style={{width: "18rem",height: '30rem', color: 'dark'}}>
+        <Card style={{width: "18rem"}}>
             <Card.Img variant='top' src={image} />
             <br/>
             <Card.Title>{tittle}</Card.Title>
             <Card.Text>{description}</Card.Text>
-            <Boton colorButton={colorButton} textButton={textButton}/>
+            <Tags text={text} colorBadge={colorBadge} />
         </Card>
     </>
   )
